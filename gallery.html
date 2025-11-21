@@ -1,0 +1,1946 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Galería - Zoolandia</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"> Zoolandia </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="gallery.html">Galería</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="page-header">
+      <video autoplay muted loop playsinline class="page-header-video">
+        <source src="images/16_9.mp4" type="video/mp4" />
+      </video>
+      <div class="page-header-overlay"></div>
+      <div class="container">
+        <h1 class="display-4 fw-bold">Galería de Animales</h1>
+        <p class="lead">
+          Explora nuestra increíble colección de animales exóticos
+        </p>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col-12">
+            <div class="filter-buttons text-center">
+              <button
+                class="btn btn-outline-primary active m-2"
+                data-filter="all"
+              >
+                Todos
+              </button>
+              <button class="btn btn-outline-primary m-2" data-filter="mammals">
+                Mamíferos
+              </button>
+              <button class="btn btn-outline-primary m-2" data-filter="birds">
+                Aves
+              </button>
+              <button
+                class="btn btn-outline-primary m-2"
+                data-filter="reptiles"
+              >
+                Reptiles
+              </button>
+              <button
+                class="btn btn-outline-primary m-2"
+                data-filter="amphibians"
+              >
+                Anfibios
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 gallery-grid">
+          <div class="col-md-6 col-lg-4 gallery-item" data-category="birds">
+            <div class="gallery-card">
+              <div class="gallery-img">
+                <img
+                  src="images/guacamayo-azul.jpg"
+                  alt="Guacamayo Azul"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    background: #2c3e50;
+                  "
+                />
+              </div>
+              <div class="gallery-card-body">
+                <span class="badge bg-success mb-2">Aves</span>
+                <h4>Guacamayo Azul</h4>
+                <p class="text-muted">Ara ararauna - Sudamérica</p>
+                <button
+                  class="btn btn-sm btn-warning fw-bold"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal1"
+                >
+                  Ver detalles
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 gallery-item" data-category="mammals">
+            <div class="gallery-card">
+              <div class="gallery-img">
+                <img
+                  src="images/tigre-bengala.jpg"
+                  alt="Tigre de Bengala"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    background: #2c3e50;
+                  "
+                />
+              </div>
+              <div class="gallery-card-body">
+                <span class="badge bg-warning mb-2">Mamíferos</span>
+                <h4>Tigre de Bengala</h4>
+                <p class="text-muted">Panthera tigris tigris - Asia</p>
+                <button
+                  class="btn btn-sm btn-warning fw-bold"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal2"
+                >
+                  Ver detalles
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 gallery-item" data-category="reptiles">
+            <div class="gallery-card">
+              <div class="gallery-img">
+                <img
+                  src="images/camaleon.jpg"
+                  alt="Camaleón Pantera"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    background: #2c3e50;
+                  "
+                />
+              </div>
+              <div class="gallery-card-body">
+                <span class="badge bg-info mb-2">Reptiles</span>
+                <h4>Camaleón Pantera</h4>
+                <p class="text-muted">Furcifer pardalis - Madagascar</p>
+                <button
+                  class="btn btn-sm btn-warning fw-bold"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal3"
+                >
+                  Ver detalles
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-md-6 col-lg-4 gallery-item"
+            data-category="amphibians"
+          >
+            <div class="gallery-card">
+              <div class="gallery-img">
+                <img
+                  src="images/rana-dardo.jpg"
+                  alt="Rana Dardo Venenosa"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    background: #2c3e50;
+                  "
+                />
+              </div>
+              <div class="gallery-card-body">
+                <span class="badge bg-danger mb-2">Anfibios</span>
+                <h4>Rana Dardo Venenosa</h4>
+                <p class="text-muted">Dendrobatidae - Centroamérica</p>
+                <button
+                  class="btn btn-sm btn-warning fw-bold"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal4"
+                >
+                  Ver detalles
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 gallery-item" data-category="mammals">
+            <div class="gallery-card">
+              <div class="gallery-img">
+                <img
+                  src="images/panda-rojo.jpg"
+                  alt="Panda Rojo"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    background: #2c3e50;
+                  "
+                />
+              </div>
+              <div class="gallery-card-body">
+                <span class="badge bg-secondary mb-2">Mamíferos</span>
+                <h4>Panda Rojo</h4>
+                <p class="text-muted">Ailurus fulgens - Himalaya</p>
+                <button
+                  class="btn btn-sm btn-warning fw-bold"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal5"
+                >
+                  Ver detalles
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 gallery-item" data-category="birds">
+            <div class="gallery-card">
+              <div class="gallery-img">
+                <img
+                  src="images/quetzal.jpg"
+                  alt="Quetzal"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    background: #2c3e50;
+                  "
+                />
+              </div>
+              <div class="gallery-card-body">
+                <span class="badge bg-primary mb-2">Aves</span>
+                <h4>Quetzal</h4>
+                <p class="text-muted">Pharomachrus mocinno - Mesoamérica</p>
+                <button
+                  class="btn btn-sm btn-warning fw-bold"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal6"
+                >
+                  Ver detalles
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 gallery-item" data-category="mammals">
+            <div class="gallery-card">
+              <div class="gallery-img">
+                <img
+                  src="images/suricata.jpg"
+                  alt="Suricata"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    background: #2c3e50;
+                  "
+                />
+              </div>
+              <div class="gallery-card-body">
+                <span class="badge bg-warning mb-2">Mamíferos</span>
+                <h4>Suricata</h4>
+                <p class="text-muted">Suricata suricatta - África</p>
+                <button
+                  class="btn btn-sm btn-warning fw-bold"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal7"
+                >
+                  Ver detalles
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 gallery-item" data-category="reptiles">
+            <div class="gallery-card">
+              <div class="gallery-img">
+                <img
+                  src="images/dragon-komodo.jpg"
+                  alt="Dragón de Komodo"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    background: #2c3e50;
+                  "
+                />
+              </div>
+              <div class="gallery-card-body">
+                <span class="badge bg-danger mb-2">Reptiles</span>
+                <h4>Dragón de Komodo</h4>
+                <p class="text-muted">Varanus komodoensis - Indonesia</p>
+                <button
+                  class="btn btn-sm btn-warning fw-bold"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal8"
+                >
+                  Ver detalles
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 gallery-item" data-category="birds">
+            <div class="gallery-card">
+              <div class="gallery-img">
+                <img
+                  src="images/tucan.jpg"
+                  alt="Tucán Toco"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    background: #2c3e50;
+                  "
+                />
+              </div>
+              <div class="gallery-card-body">
+                <span class="badge bg-success mb-2">Aves</span>
+                <h4>Tucán</h4>
+                <p class="text-muted">Ramphastos toco - Sudamérica</p>
+                <button
+                  class="btn btn-sm btn-warning fw-bold"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal9"
+                >
+                  Ver detalles
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 gallery-item" data-category="mammals">
+            <div class="gallery-card">
+              <div class="gallery-img">
+                <img
+                  src="images/leopardo-nieves.jpg"
+                  alt="Leopardo de las Nieves"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    background: #2c3e50;
+                  "
+                />
+              </div>
+              <div class="gallery-card-body">
+                <span class="badge bg-danger mb-2">Mamíferos</span>
+                <h4>Leopardo de las Nieves</h4>
+                <p class="text-muted">Panthera uncia - Asia Central</p>
+                <button
+                  class="btn btn-sm btn-warning fw-bold"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal10"
+                >
+                  Ver detalles
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 gallery-item" data-category="reptiles">
+            <div class="gallery-card">
+              <div class="gallery-img">
+                <img
+                  src="images/tortuga-marina.jpg"
+                  alt="Tortuga Marina Verde"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    background: #2c3e50;
+                  "
+                />
+              </div>
+              <div class="gallery-card-body">
+                <span class="badge bg-danger mb-2">Reptiles</span>
+                <h4>Tortuga Marina Verde</h4>
+                <p class="text-muted">Chelonia mydas - Océanos Tropicales</p>
+                <button
+                  class="btn btn-sm btn-warning fw-bold"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal11"
+                >
+                  Ver detalles
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 gallery-item" data-category="birds">
+            <div class="gallery-card">
+              <div class="gallery-img">
+                <img
+                  src="images/aguila-harpia.jpg"
+                  alt="Águila Harpía"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    background: #2c3e50;
+                  "
+                />
+              </div>
+              <div class="gallery-card-body">
+                <span class="badge bg-danger mb-2">Aves</span>
+                <h4>Águila Harpía</h4>
+                <p class="text-muted">Harpia harpyja - Amazonas</p>
+                <button
+                  class="btn btn-sm btn-warning fw-bold"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal12"
+                >
+                  Ver detalles
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 gallery-item" data-category="mammals">
+            <div class="gallery-card">
+              <div class="gallery-img">
+                <img
+                  src="images/gorila-montana.jpg"
+                  alt="Gorila de Montaña"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    background: #2c3e50;
+                  "
+                />
+              </div>
+              <div class="gallery-card-body">
+                <span class="badge bg-danger mb-2">Mamíferos</span>
+                <h4>Gorila de Montaña</h4>
+                <p class="text-muted">Gorilla beringei - África Central</p>
+                <button
+                  class="btn btn-sm btn-warning fw-bold"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal13"
+                >
+                  Ver detalles
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 gallery-item" data-category="mammals">
+            <div class="gallery-card">
+              <div class="gallery-img">
+                <img
+                  src="images/elefante-africano.jpg"
+                  alt="Elefante Africano"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    background: #2c3e50;
+                  "
+                />
+              </div>
+              <div class="gallery-card-body">
+                <span class="badge bg-danger mb-2">Mamíferos</span>
+                <h4>Elefante Africano</h4>
+                <p class="text-muted">Loxodonta africana - África</p>
+                <button
+                  class="btn btn-sm btn-warning fw-bold"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal14"
+                >
+                  Ver detalles
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 gallery-item" data-category="reptiles">
+            <div class="gallery-card">
+              <div class="gallery-img">
+                <img
+                  src="images/cocodrilo-orinoco.jpg"
+                  alt="Cocodrilo del Orinoco"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    background: #2c3e50;
+                  "
+                />
+              </div>
+              <div class="gallery-card-body">
+                <span class="badge bg-danger mb-2">Reptiles</span>
+                <h4>Cocodrilo del Orinoco</h4>
+                <p class="text-muted">Crocodylus intermedius - Venezuela</p>
+                <button
+                  class="btn btn-sm btn-warning fw-bold"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal15"
+                >
+                  Ver detalles
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 gallery-item" data-category="birds">
+            <div class="gallery-card">
+              <div class="gallery-img">
+                <img
+                  src="images/condor-andino.jpg"
+                  alt="Cóndor Andino"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    background: #2c3e50;
+                  "
+                />
+              </div>
+              <div class="gallery-card-body">
+                <span class="badge bg-warning text-dark mb-2">Aves</span>
+                <h4>Cóndor Andino</h4>
+                <p class="text-muted">Vultur gryphus - Andes</p>
+                <button
+                  class="btn btn-sm btn-warning fw-bold"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal16"
+                >
+                  Ver detalles
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 gallery-item" data-category="mammals">
+            <div class="gallery-card">
+              <div class="gallery-img">
+                <img
+                  src="images/oso-polar.jpg"
+                  alt="Oso Polar"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    background: #2c3e50;
+                  "
+                />
+              </div>
+              <div class="gallery-card-body">
+                <span class="badge bg-danger mb-2">Mamíferos</span>
+                <h4>Oso Polar</h4>
+                <p class="text-muted">Ursus maritimus - Ártico</p>
+                <button
+                  class="btn btn-sm btn-warning fw-bold"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal17"
+                >
+                  Ver detalles
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-md-6 col-lg-4 gallery-item"
+            data-category="amphibians"
+          >
+            <div class="gallery-card">
+              <div class="gallery-img">
+                <img
+                  src="images/ajolote.jpg"
+                  alt="Ajolote Mexicano"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    background: #2c3e50;
+                  "
+                />
+              </div>
+              <div class="gallery-card-body">
+                <span class="badge bg-danger mb-2">Anfibios</span>
+                <h4>Ajolote Mexicano</h4>
+                <p class="text-muted">Ambystoma mexicanum - México</p>
+                <button
+                  class="btn btn-sm btn-warning fw-bold"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal18"
+                >
+                  Ver detalles
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer cargado automáticamente desde footer.html -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Modal 1: Guacamayo Azul -->
+    <div class="modal fade" id="modal1" tabindex="-1">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header bg-dark text-white">
+            <h3 class="modal-title">Guacamayo Azul</h3>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body bg-dark text-white">
+            <div class="container py-4">
+              <div class="row">
+                <div class="col-lg-6 mb-4">
+                  <img
+                    src="images/guacamayo-azul.jpg"
+                    alt="Guacamayo Azul"
+                    class="img-fluid rounded w-100"
+                    style="
+                      max-height: 600px;
+                      object-fit: contain;
+                      background: #1a1a1a;
+                    "
+                  />
+                </div>
+                <div class="col-lg-6">
+                  <h4 class="text-warning mb-3">Información General</h4>
+                  <p>
+                    <strong>Nombre Científico:</strong> <em>Ara ararauna</em>
+                  </p>
+                  <p><strong>Familia:</strong> Psittacidae</p>
+                  <p>
+                    <strong>Estado de Conservación:</strong>
+                    <span class="badge bg-success">Preocupación Menor</span>
+                  </p>
+                  <p>
+                    <strong>Hábitat:</strong> Bosques tropicales de Sudamérica
+                  </p>
+                  <p><strong>Tamaño:</strong> 76-86 cm</p>
+                  <p><strong>Peso:</strong> 900-1300 gramos</p>
+
+                  <hr class="bg-light" />
+
+                  <h4 class="text-warning mb-3">Descripción</h4>
+                  <p>
+                    El guacamayo azul y amarillo es una de las aves más
+                    coloridas y reconocibles del mundo. Su plumaje vibrante
+                    combina azul cobalto brillante en la parte superior con un
+                    amarillo dorado intenso en el pecho y vientre.
+                  </p>
+
+                  <h4 class="text-warning mb-3 mt-4">Comportamiento</h4>
+                  <p>
+                    Son aves muy sociales que viven en parejas o grupos
+                    pequeños. Forman vínculos de pareja de por vida y son
+                    conocidos por su inteligencia y capacidad de imitar sonidos.
+                  </p>
+
+                  <h4 class="text-warning mb-3 mt-4">Alimentación</h4>
+                  <p>
+                    Se alimentan principalmente de frutas, nueces, semillas y
+                    flores. Su fuerte pico les permite romper incluso las nueces
+                    más duras.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 2: Tigre de Bengala -->
+    <div class="modal fade" id="modal2" tabindex="-1">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header bg-dark text-white">
+            <h3 class="modal-title">Tigre de Bengala</h3>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body bg-dark text-white">
+            <div class="container py-4">
+              <div class="row">
+                <div class="col-lg-6 mb-4">
+                  <img
+                    src="images/tigre-bengala.jpg"
+                    alt="Tigre de Bengala"
+                    class="img-fluid rounded w-100"
+                    style="
+                      max-height: 600px;
+                      object-fit: contain;
+                      background: #1a1a1a;
+                    "
+                  />
+                </div>
+                <div class="col-lg-6">
+                  <h4 class="text-warning mb-3">Información General</h4>
+                  <p>
+                    <strong>Nombre Científico:</strong>
+                    <em>Panthera tigris tigris</em>
+                  </p>
+                  <p><strong>Familia:</strong> Felidae</p>
+                  <p>
+                    <strong>Estado de Conservación:</strong>
+                    <span class="badge bg-danger">En Peligro</span>
+                  </p>
+                  <p>
+                    <strong>Hábitat:</strong> Bosques de India, Bangladesh,
+                    Nepal y Bután
+                  </p>
+                  <p>
+                    <strong>Población:</strong> 2,500-3,000 en estado salvaje
+                  </p>
+                  <p><strong>Peso:</strong> 180-260 kg (machos)</p>
+
+                  <hr class="bg-light" />
+
+                  <h4 class="text-warning mb-3">Descripción</h4>
+                  <p>
+                    El tigre de Bengala es la subespecie más numerosa de tigres.
+                    Es un depredador apex crucial para el equilibrio de los
+                    ecosistemas. Su pelaje anaranjado con rayas negras
+                    verticales es inconfundible y sirve como camuflaje perfecto
+                    en su hábitat natural.
+                  </p>
+
+                  <h4 class="text-warning mb-3 mt-4">Amenazas</h4>
+                  <ul>
+                    <li>Pérdida de hábitat por deforestación</li>
+                    <li>Caza furtiva por su piel y partes del cuerpo</li>
+                    <li>Conflictos con humanos</li>
+                    <li>Disminución de presas naturales</li>
+                  </ul>
+
+                  <h4 class="text-warning mb-3 mt-4">Conservación</h4>
+                  <p>
+                    Programas de reproducción en cautiverio, reservas protegidas
+                    y patrullaje anti-caza ayudan a estabilizar las poblaciones.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 3: Camaleón Pantera -->
+    <div class="modal fade" id="modal3" tabindex="-1">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header bg-dark text-white">
+            <h3 class="modal-title">Camaleón Pantera</h3>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body bg-dark text-white">
+            <div class="container py-4">
+              <div class="row">
+                <div class="col-lg-6 mb-4">
+                  <img
+                    src="images/camaleon.jpg"
+                    alt="Camaleón Pantera"
+                    class="img-fluid rounded w-100"
+                    style="
+                      max-height: 600px;
+                      object-fit: contain;
+                      background: #1a1a1a;
+                    "
+                  />
+                </div>
+                <div class="col-lg-6">
+                  <h4 class="text-warning mb-3">Información General</h4>
+                  <p>
+                    <strong>Nombre Científico:</strong>
+                    <em>Furcifer pardalis</em>
+                  </p>
+                  <p><strong>Familia:</strong> Chamaeleonidae</p>
+                  <p>
+                    <strong>Estado de Conservación:</strong>
+                    <span class="badge bg-info">Preocupación Menor</span>
+                  </p>
+                  <p>
+                    <strong>Hábitat:</strong> Bosques tropicales de Madagascar
+                  </p>
+                  <p><strong>Tamaño:</strong> 40-55 cm</p>
+                  <p><strong>Peso:</strong> 140-180 gramos</p>
+
+                  <hr class="bg-light" />
+
+                  <h4 class="text-warning mb-3">Descripción</h4>
+                  <p>
+                    El camaleón pantera es famoso por su increíble capacidad de
+                    cambiar de color. Los machos pueden mostrar colores
+                    brillantes como rojo, azul, verde, amarillo y naranja. Esta
+                    capacidad se usa para comunicación, regulación de
+                    temperatura y camuflaje.
+                  </p>
+
+                  <h4 class="text-warning mb-3 mt-4">
+                    Características Especiales
+                  </h4>
+                  <ul>
+                    <li>Ojos que se mueven independientemente</li>
+                    <li>Lengua proyectil extremadamente rápida</li>
+                    <li>Cola prensil para agarrarse a ramas</li>
+                    <li>Cambio de color según estado emocional</li>
+                  </ul>
+
+                  <h4 class="text-warning mb-3 mt-4">Alimentación</h4>
+                  <p>
+                    Carnívoro insectívoro. Se alimenta principalmente de
+                    grillos, langostas y otros insectos que captura con su
+                    lengua pegajosa.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 4: Rana Dardo Venenosa -->
+    <div class="modal fade" id="modal4" tabindex="-1">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header bg-dark text-white">
+            <h3 class="modal-title">Rana Dardo Venenosa</h3>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body bg-dark text-white">
+            <div class="container py-4">
+              <div class="row">
+                <div class="col-lg-6 mb-4">
+                  <img
+                    src="images/rana-dardo.jpg"
+                    alt="Rana Dardo"
+                    class="img-fluid rounded w-100"
+                    style="
+                      max-height: 600px;
+                      object-fit: contain;
+                      background: #1a1a1a;
+                    "
+                  />
+                </div>
+                <div class="col-lg-6">
+                  <h4 class="text-warning mb-3">Información General</h4>
+                  <p>
+                    <strong>Nombre Científico:</strong> <em>Dendrobatidae</em>
+                  </p>
+                  <p><strong>Familia:</strong> Dendrobatidae</p>
+                  <p>
+                    <strong>Estado de Conservación:</strong>
+                    <span class="badge bg-warning text-dark">Vulnerable</span>
+                  </p>
+                  <p>
+                    <strong>Hábitat:</strong> Selvas tropicales de Centroamérica
+                    y Sudamérica
+                  </p>
+                  <p><strong>Tamaño:</strong> 1.5-6 cm</p>
+                  <p><strong>Peso:</strong> 2-7 gramos</p>
+
+                  <hr class="bg-light" />
+
+                  <h4 class="text-warning mb-3">Descripción</h4>
+                  <p>
+                    Las ranas dardo venenosas son conocidas por sus colores
+                    brillantes y vibrantes que advierten a los depredadores
+                    sobre su toxicidad. Sus colores incluyen rojo, amarillo,
+                    azul, verde y negro en combinaciones llamativas.
+                  </p>
+
+                  <h4 class="text-warning mb-3 mt-4">Toxicidad</h4>
+                  <p>
+                    Su piel segrega alcaloides tóxicos que obtienen de su dieta
+                    de hormigas, ácaros y termitas. En cautiverio, donde su
+                    dieta es diferente, pierden su toxicidad.
+                  </p>
+
+                  <h4 class="text-warning mb-3 mt-4">Amenazas</h4>
+                  <ul>
+                    <li>Deforestación de selvas tropicales</li>
+                    <li>Cambio climático</li>
+                    <li>Comercio ilegal de mascotas exóticas</li>
+                    <li>Contaminación del agua</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 5: Panda Rojo -->
+    <div class="modal fade" id="modal5" tabindex="-1">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header bg-dark text-white">
+            <h3 class="modal-title">Panda Rojo</h3>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body bg-dark text-white">
+            <div class="container py-4">
+              <div class="row">
+                <div class="col-lg-6 mb-4">
+                  <img
+                    src="images/panda-rojo.jpg"
+                    alt="Panda Rojo"
+                    class="img-fluid rounded w-100"
+                    style="
+                      max-height: 600px;
+                      object-fit: contain;
+                      background: #1a1a1a;
+                    "
+                  />
+                </div>
+                <div class="col-lg-6">
+                  <h4 class="text-warning mb-3">Información General</h4>
+                  <p>
+                    <strong>Nombre Científico:</strong> <em>Ailurus fulgens</em>
+                  </p>
+                  <p><strong>Familia:</strong> Ailuridae</p>
+                  <p>
+                    <strong>Estado de Conservación:</strong>
+                    <span class="badge bg-danger">En Peligro</span>
+                  </p>
+                  <p>
+                    <strong>Hábitat:</strong> Bosques templados del Himalaya
+                  </p>
+                  <p>
+                    <strong>Población:</strong> Menos de 10,000 en vida
+                    silvestre
+                  </p>
+                  <p><strong>Peso:</strong> 3-6 kg</p>
+
+                  <hr class="bg-light" />
+
+                  <h4 class="text-warning mb-3">Descripción</h4>
+                  <p>
+                    A pesar de su nombre, el panda rojo está más relacionado con
+                    los mapaches que con los pandas gigantes. Su pelaje
+                    rojizo-marrón, cola larga y anillada, y cara blanca lo hacen
+                    inconfundible y adorable.
+                  </p>
+
+                  <h4 class="text-warning mb-3 mt-4">Comportamiento</h4>
+                  <p>
+                    Son animales solitarios y mayormente nocturnos. Pasan la
+                    mayor parte del día durmiendo en las ramas de los árboles,
+                    enrollados con su cola como manta.
+                  </p>
+
+                  <h4 class="text-warning mb-3 mt-4">Conservación</h4>
+                  <p>
+                    La pérdida de hábitat debido a la deforestación es su
+                    principal amenaza. Programas de reproducción en zoológicos y
+                    protección de bosques son cruciales para su supervivencia.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 6: Quetzal -->
+    <div class="modal fade" id="modal6" tabindex="-1">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header bg-dark text-white">
+            <h3 class="modal-title">Quetzal</h3>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body bg-dark text-white">
+            <div class="container py-4">
+              <div class="row">
+                <div class="col-lg-6 mb-4">
+                  <img
+                    src="images/quetzal.jpg"
+                    alt="Quetzal"
+                    class="img-fluid rounded w-100"
+                    style="
+                      max-height: 600px;
+                      object-fit: contain;
+                      background: #1a1a1a;
+                    "
+                  />
+                </div>
+                <div class="col-lg-6">
+                  <h4 class="text-warning mb-3">Información General</h4>
+                  <p>
+                    <strong>Nombre Científico:</strong>
+                    <em>Pharomachrus mocinno</em>
+                  </p>
+                  <p><strong>Familia:</strong> Trogonidae</p>
+                  <p>
+                    <strong>Estado de Conservación:</strong>
+                    <span class="badge bg-warning text-dark"
+                      >Casi Amenazado</span
+                    >
+                  </p>
+                  <p>
+                    <strong>Hábitat:</strong> Bosques nublados de Mesoamérica
+                  </p>
+                  <p><strong>Tamaño:</strong> 36-40 cm (sin cola)</p>
+                  <p><strong>Cola:</strong> Hasta 65 cm en machos</p>
+
+                  <hr class="bg-light" />
+
+                  <h4 class="text-warning mb-3">Descripción</h4>
+                  <p>
+                    El quetzal es considerado una de las aves más hermosas del
+                    mundo. Los machos tienen un plumaje verde iridiscente, pecho
+                    rojo brillante y plumas de la cola extraordinariamente
+                    largas. Es el ave nacional de Guatemala y símbolo de
+                    libertad en la cultura maya.
+                  </p>
+
+                  <h4 class="text-warning mb-3 mt-4">Cultura</h4>
+                  <p>
+                    Los mayas y aztecas consideraban al quetzal sagrado. Sus
+                    plumas eran más valiosas que el oro y solo la realeza podía
+                    usarlas. Matar un quetzal era un crimen capital.
+                  </p>
+
+                  <h4 class="text-warning mb-3 mt-4">Conservación</h4>
+                  <p>
+                    La deforestación de los bosques nublados es su principal
+                    amenaza. Necesitan bosques primarios maduros para sobrevivir
+                    y no se reproducen bien en cautiverio.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODALES 7-18 ADICIONALES CON INFORMACIÓN COMPLETA -->
+
+    <!-- Modal 7: Suricata -->
+    <div class="modal fade" id="modal7" tabindex="-1">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header bg-dark text-white">
+            <h3 class="modal-title">Suricata</h3>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body bg-dark text-white">
+            <div class="container py-4">
+              <div class="row">
+                <div class="col-lg-6 mb-4">
+                  <img
+                    src="images/suricata.jpg"
+                    alt="Suricata"
+                    class="img-fluid rounded w-100"
+                    style="
+                      max-height: 600px;
+                      object-fit: contain;
+                      background: #1a1a1a;
+                    "
+                  />
+                </div>
+                <div class="col-lg-6">
+                  <h4 class="text-warning mb-3">Información General</h4>
+                  <p>
+                    <strong>Nombre Científico:</strong>
+                    <em>Suricata suricatta</em>
+                  </p>
+                  <p><strong>Familia:</strong> Herpestidae</p>
+                  <p>
+                    <strong>Estado:</strong>
+                    <span class="badge bg-success">Preocupación Menor</span>
+                  </p>
+                  <p>
+                    <strong>Hábitat:</strong> Desiertos y sabanas del sur de
+                    África
+                  </p>
+                  <p><strong>Tamaño:</strong> 25-35 cm</p>
+                  <p><strong>Peso:</strong> 600-900 gramos</p>
+                  <hr class="bg-light" />
+                  <h4 class="text-warning mb-3">Descripción</h4>
+                  <p>
+                    Las suricatas son pequeños carnívoros sociales conocidos por
+                    su comportamiento vigilante. Viven en grupos de hasta 30
+                    individuos llamados "pandillas" y se turnan para hacer
+                    guardia sobre sus patas traseras buscando depredadores.
+                  </p>
+                  <h4 class="text-warning mb-3 mt-4">Comportamiento Social</h4>
+                  <p>
+                    Tienen una estructura social muy compleja. Las hembras alfa
+                    dominan el grupo y son las únicas que se reproducen. Los
+                    demás miembros ayudan a cuidar y enseñar a las crías.
+                  </p>
+                  <h4 class="text-warning mb-3 mt-4">Adaptaciones</h4>
+                  <ul>
+                    <li>
+                      Inmunidad al veneno de escorpiones y algunas serpientes
+                    </li>
+                    <li>
+                      Membranas oscuras alrededor de los ojos que reducen el
+                      deslumbramiento
+                    </li>
+                    <li>Garras fuertes para excavar madrigueras complejas</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 8: Dragón de Komodo -->
+    <div class="modal fade" id="modal8" tabindex="-1">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header bg-dark text-white">
+            <h3 class="modal-title">Dragón de Komodo</h3>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body bg-dark text-white">
+            <div class="container py-4">
+              <div class="row">
+                <div class="col-lg-6 mb-4">
+                  <img
+                    src="images/dragon-komodo.jpg"
+                    alt="Dragón de Komodo"
+                    class="img-fluid rounded w-100"
+                    style="
+                      max-height: 600px;
+                      object-fit: contain;
+                      background: #1a1a1a;
+                    "
+                  />
+                </div>
+                <div class="col-lg-6">
+                  <h4 class="text-warning mb-3">Información General</h4>
+                  <p>
+                    <strong>Nombre Científico:</strong>
+                    <em>Varanus komodoensis</em>
+                  </p>
+                  <p><strong>Familia:</strong> Varanidae</p>
+                  <p>
+                    <strong>Estado:</strong>
+                    <span class="badge bg-danger">En Peligro</span>
+                  </p>
+                  <p>
+                    <strong>Hábitat:</strong> Islas de Indonesia (Komodo, Rinca,
+                    Flores)
+                  </p>
+                  <p><strong>Tamaño:</strong> Hasta 3 metros de longitud</p>
+                  <p><strong>Peso:</strong> 70-90 kg (puede llegar a 150 kg)</p>
+                  <hr class="bg-light" />
+                  <h4 class="text-warning mb-3">Descripción</h4>
+                  <p>
+                    El dragón de Komodo es el lagarto viviente más grande del
+                    mundo. Depredador apex en su ecosistema, puede derribar
+                    presas tan grandes como búfalos de agua usando su mordida
+                    venenosa.
+                  </p>
+                  <h4 class="text-warning mb-3 mt-4">Capacidades de Caza</h4>
+                  <ul>
+                    <li>Velocidad de hasta 20 km/h en distancias cortas</li>
+                    <li>Veneno que impide la coagulación de la sangre</li>
+                    <li>Olfato desarrollado que detecta carroña a 10 km</li>
+                    <li>Reproducción partenogenética posible</li>
+                  </ul>
+                  <h4 class="text-warning mb-3 mt-4">Conservación</h4>
+                  <p>
+                    Quedan solo 3,000-5,000 individuos. El Parque Nacional de
+                    Komodo protege su hábitat.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 9: Tucán -->
+    <div class="modal fade" id="modal9" tabindex="-1">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header bg-dark text-white">
+            <h3 class="modal-title">Tucán Toco</h3>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body bg-dark text-white">
+            <div class="container py-4">
+              <div class="row">
+                <div class="col-lg-6 mb-4">
+                  <img
+                    src="images/tucan.jpg"
+                    alt="Tucán"
+                    class="img-fluid rounded w-100"
+                    style="
+                      max-height: 600px;
+                      object-fit: contain;
+                      background: #1a1a1a;
+                    "
+                  />
+                </div>
+                <div class="col-lg-6">
+                  <h4 class="text-warning mb-3">Información General</h4>
+                  <p>
+                    <strong>Nombre Científico:</strong> <em>Ramphastos toco</em>
+                  </p>
+                  <p><strong>Familia:</strong> Ramphastidae</p>
+                  <p>
+                    <strong>Estado:</strong>
+                    <span class="badge bg-success">Preocupación Menor</span>
+                  </p>
+                  <p>
+                    <strong>Hábitat:</strong> Selvas tropicales de Sudamérica
+                  </p>
+                  <p><strong>Tamaño:</strong> 55-65 cm</p>
+                  <p><strong>Peso:</strong> 500-860 gramos</p>
+                  <hr class="bg-light" />
+                  <h4 class="text-warning mb-3">Descripción</h4>
+                  <p>
+                    El tucán toco es el más grande de las especies de tucanes.
+                    Su enorme pico naranja y amarillo mide casi 20 cm de largo.
+                    A pesar de su apariencia, el pico es hueco y muy liviano.
+                  </p>
+                  <h4 class="text-warning mb-3 mt-4">Función del Pico</h4>
+                  <ul>
+                    <li>
+                      Regulación de temperatura corporal (radiador térmico)
+                    </li>
+                    <li>Alcanzar frutas en ramas delgadas</li>
+                    <li>Intimidación a depredadores</li>
+                    <li>Atracción de parejas</li>
+                  </ul>
+                  <h4 class="text-warning mb-3 mt-4">Alimentación</h4>
+                  <p>
+                    Principalmente frugívoro. Su papel es crucial para la
+                    dispersión de semillas en la selva.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 10: Leopardo de las Nieves -->
+    <div class="modal fade" id="modal10" tabindex="-1">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header bg-dark text-white">
+            <h3 class="modal-title">Leopardo de las Nieves</h3>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body bg-dark text-white">
+            <div class="container py-4">
+              <div class="row">
+                <div class="col-lg-6 mb-4">
+                  <img
+                    src="images/leopardo-nieves.jpg"
+                    alt="Leopardo de las Nieves"
+                    class="img-fluid rounded w-100"
+                    style="
+                      max-height: 600px;
+                      object-fit: contain;
+                      background: #1a1a1a;
+                    "
+                  />
+                </div>
+                <div class="col-lg-6">
+                  <h4 class="text-warning mb-3">Información General</h4>
+                  <p>
+                    <strong>Nombre Científico:</strong> <em>Panthera uncia</em>
+                  </p>
+                  <p><strong>Familia:</strong> Felidae</p>
+                  <p>
+                    <strong>Estado:</strong>
+                    <span class="badge bg-danger">Vulnerable</span>
+                  </p>
+                  <p>
+                    <strong>Hábitat:</strong> Montañas de Asia Central
+                    (Himalaya, Tibet)
+                  </p>
+                  <p>
+                    <strong>Población:</strong> 4,000-6,500 en estado salvaje
+                  </p>
+                  <p><strong>Peso:</strong> 22-55 kg</p>
+                  <hr class="bg-light" />
+                  <h4 class="text-warning mb-3">Descripción</h4>
+                  <p>
+                    Felino adaptado a vivir en algunas de las regiones más
+                    inhóspitas del planeta. Su pelaje gris pálido con manchas
+                    oscuras proporciona camuflaje perfecto en terrenos rocosos y
+                    nevados.
+                  </p>
+                  <h4 class="text-warning mb-3 mt-4">Adaptaciones Extremas</h4>
+                  <ul>
+                    <li>Patas anchas que actúan como raquetas de nieve</li>
+                    <li>Cola extremadamente larga para balance y abrigo</li>
+                    <li>
+                      Pulmones y fosas nasales agrandadas para aire enrarecido
+                    </li>
+                    <li>Pelaje denso que soporta -40°C</li>
+                  </ul>
+                  <h4 class="text-warning mb-3 mt-4">Amenazas</h4>
+                  <p>
+                    Caza furtiva por su piel, pérdida de presas naturales,
+                    conflictos con ganaderos y cambio climático.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 11: Tortuga Marina Verde -->
+    <div class="modal fade" id="modal11" tabindex="-1">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header bg-dark text-white">
+            <h3 class="modal-title">Tortuga Marina Verde</h3>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body bg-dark text-white">
+            <div class="container py-4">
+              <div class="row">
+                <div class="col-lg-6 mb-4">
+                  <img
+                    src="images/tortuga-marina.jpg"
+                    alt="Tortuga Marina"
+                    class="img-fluid rounded w-100"
+                    style="
+                      max-height: 600px;
+                      object-fit: contain;
+                      background: #1a1a1a;
+                    "
+                  />
+                </div>
+                <div class="col-lg-6">
+                  <h4 class="text-warning mb-3">Información General</h4>
+                  <p>
+                    <strong>Nombre Científico:</strong> <em>Chelonia mydas</em>
+                  </p>
+                  <p><strong>Familia:</strong> Cheloniidae</p>
+                  <p>
+                    <strong>Estado:</strong>
+                    <span class="badge bg-danger">En Peligro</span>
+                  </p>
+                  <p>
+                    <strong>Hábitat:</strong> Océanos tropicales y subtropicales
+                  </p>
+                  <p><strong>Tamaño:</strong> 1-1.5 metros</p>
+                  <p><strong>Peso:</strong> 65-200 kg</p>
+                  <hr class="bg-light" />
+                  <h4 class="text-warning mb-3">Descripción</h4>
+                  <p>
+                    Una de las tortugas marinas más grandes. Los adultos son
+                    herbívoros alimentándose de algas y pastos marinos.
+                  </p>
+                  <h4 class="text-warning mb-3 mt-4">Ciclo de Vida</h4>
+                  <ul>
+                    <li>
+                      Las hembras regresan a la playa donde nacieron para anidar
+                    </li>
+                    <li>Pueden vivir más de 80 años</li>
+                    <li>Migran miles de kilómetros</li>
+                  </ul>
+                  <h4 class="text-warning mb-3 mt-4">Amenazas</h4>
+                  <p>
+                    Captura en redes de pesca, contaminación marina, pérdida de
+                    playas y cambio climático.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 12: Águila Harpía -->
+    <div class="modal fade" id="modal12" tabindex="-1">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header bg-dark text-white">
+            <h3 class="modal-title">Águila Harpía</h3>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body bg-dark text-white">
+            <div class="container py-4">
+              <div class="row">
+                <div class="col-lg-6 mb-4">
+                  <img
+                    src="images/aguila-harpia.jpg"
+                    alt="Águila Harpía"
+                    class="img-fluid rounded w-100"
+                    style="
+                      max-height: 600px;
+                      object-fit: contain;
+                      background: #1a1a1a;
+                    "
+                  />
+                </div>
+                <div class="col-lg-6">
+                  <h4 class="text-warning mb-3">Información General</h4>
+                  <p>
+                    <strong>Nombre Científico:</strong> <em>Harpia harpyja</em>
+                  </p>
+                  <p><strong>Familia:</strong> Accipitridae</p>
+                  <p>
+                    <strong>Estado:</strong>
+                    <span class="badge bg-warning text-dark"
+                      >Casi Amenazado</span
+                    >
+                  </p>
+                  <p><strong>Hábitat:</strong> Selvas tropicales de América</p>
+                  <p><strong>Envergadura:</strong> Hasta 2 metros</p>
+                  <p><strong>Peso:</strong> 4-9 kg</p>
+                  <hr class="bg-light" />
+                  <h4 class="text-warning mb-3">Descripción</h4>
+                  <p>
+                    Una de las aves rapaces más grandes y poderosas. Depredador
+                    apex de las selvas tropicales.
+                  </p>
+                  <h4 class="text-warning mb-3 mt-4">Capacidades</h4>
+                  <ul>
+                    <li>Garras del tamaño de garras de oso grizzly</li>
+                    <li>Puede cargar presas de hasta 7 kg</li>
+                    <li>Velocidad de vuelo de hasta 80 km/h</li>
+                    <li>Vista excepcionalmente aguda</li>
+                  </ul>
+                  <h4 class="text-warning mb-3 mt-4">Conservación</h4>
+                  <p>La deforestación es su principal amenaza.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 13: Gorila de Montaña -->
+    <div class="modal fade" id="modal13" tabindex="-1">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header bg-dark text-white">
+            <h3 class="modal-title">Gorila de Montaña</h3>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body bg-dark text-white">
+            <div class="container py-4">
+              <div class="row">
+                <div class="col-lg-6 mb-4">
+                  <img
+                    src="images/gorila-montana.jpg"
+                    alt="Gorila de Montaña"
+                    class="img-fluid rounded w-100"
+                    style="
+                      max-height: 600px;
+                      object-fit: contain;
+                      background: #1a1a1a;
+                    "
+                  />
+                </div>
+                <div class="col-lg-6">
+                  <h4 class="text-warning mb-3">Información General</h4>
+                  <p>
+                    <strong>Nombre Científico:</strong>
+                    <em>Gorilla beringei beringei</em>
+                  </p>
+                  <p><strong>Familia:</strong> Hominidae</p>
+                  <p>
+                    <strong>Estado:</strong>
+                    <span class="badge bg-danger">En Peligro</span>
+                  </p>
+                  <p><strong>Hábitat:</strong> Montañas de África Central</p>
+                  <p>
+                    <strong>Población:</strong> Aproximadamente 1,063 individuos
+                  </p>
+                  <p><strong>Peso:</strong> 120-220 kg (machos)</p>
+                  <hr class="bg-light" />
+                  <h4 class="text-warning mb-3">Descripción</h4>
+                  <p>
+                    Nuestros parientes más cercanos después de chimpancés y
+                    bonobos. Viven en grupos familiares liderados por un macho
+                    alfa "espalda plateada".
+                  </p>
+                  <h4 class="text-warning mb-3 mt-4">Comportamiento</h4>
+                  <ul>
+                    <li>Comparten el 98% del ADN humano</li>
+                    <li>Extremadamente inteligentes y empáticos</li>
+                    <li>Herbívoros que consumen hasta 30 kg diarios</li>
+                    <li>25 vocalizaciones diferentes</li>
+                  </ul>
+                  <h4 class="text-warning mb-3 mt-4">Conservación</h4>
+                  <p>
+                    Su población ha aumentado gracias a esfuerzos intensivos de
+                    conservación.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 14: Elefante Africano -->
+    <div class="modal fade" id="modal14" tabindex="-1">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header bg-dark text-white">
+            <h3 class="modal-title">Elefante Africano</h3>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body bg-dark text-white">
+            <div class="container py-4">
+              <div class="row">
+                <div class="col-lg-6 mb-4">
+                  <img
+                    src="images/elefante-africano.jpg"
+                    alt="Elefante Africano"
+                    class="img-fluid rounded w-100"
+                    style="
+                      max-height: 600px;
+                      object-fit: contain;
+                      background: #1a1a1a;
+                    "
+                  />
+                </div>
+                <div class="col-lg-6">
+                  <h4 class="text-warning mb-3">Información General</h4>
+                  <p>
+                    <strong>Nombre Científico:</strong>
+                    <em>Loxodonta africana</em>
+                  </p>
+                  <p><strong>Familia:</strong> Elephantidae</p>
+                  <p>
+                    <strong>Estado:</strong>
+                    <span class="badge bg-danger">En Peligro</span>
+                  </p>
+                  <p><strong>Hábitat:</strong> Sabanas y bosques de África</p>
+                  <p><strong>Población:</strong> Aproximadamente 415,000</p>
+                  <p><strong>Peso:</strong> 4,000-7,000 kg</p>
+                  <hr class="bg-light" />
+                  <h4 class="text-warning mb-3">Descripción</h4>
+                  <p>
+                    El animal terrestre más grande del mundo. Ingenieros del
+                    ecosistema que modifican hábitats enteros.
+                  </p>
+                  <h4 class="text-warning mb-3 mt-4">Inteligencia</h4>
+                  <ul>
+                    <li>Memoria excepcional</li>
+                    <li>Estructuras sociales matriarcales complejas</li>
+                    <li>Luto observable por miembros fallecidos</li>
+                    <li>Uso de herramientas</li>
+                  </ul>
+                  <h4 class="text-warning mb-3 mt-4">Amenazas</h4>
+                  <p>
+                    Caza furtiva por marfil, pérdida de hábitat y conflictos
+                    humano-elefante.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 15: Cocodrilo del Orinoco -->
+    <div class="modal fade" id="modal15" tabindex="-1">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header bg-dark text-white">
+            <h3 class="modal-title">Cocodrilo del Orinoco</h3>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body bg-dark text-white">
+            <div class="container py-4">
+              <div class="row">
+                <div class="col-lg-6 mb-4">
+                  <img
+                    src="images/cocodrilo-orinoco.jpg"
+                    alt="Cocodrilo del Orinoco"
+                    class="img-fluid rounded w-100"
+                    style="
+                      max-height: 600px;
+                      object-fit: contain;
+                      background: #1a1a1a;
+                    "
+                  />
+                </div>
+                <div class="col-lg-6">
+                  <h4 class="text-warning mb-3">Información General</h4>
+                  <p>
+                    <strong>Nombre Científico:</strong>
+                    <em>Crocodylus intermedius</em>
+                  </p>
+                  <p><strong>Familia:</strong> Crocodylidae</p>
+                  <p>
+                    <strong>Estado:</strong>
+                    <span class="badge bg-danger">En Peligro Crítico</span>
+                  </p>
+                  <p>
+                    <strong>Hábitat:</strong> Cuenca del Orinoco (Venezuela y
+                    Colombia)
+                  </p>
+                  <p><strong>Población:</strong> Menos de 1,500</p>
+                  <p><strong>Tamaño:</strong> Hasta 6.8 metros</p>
+                  <hr class="bg-light" />
+                  <h4 class="text-warning mb-3">Descripción</h4>
+                  <p>
+                    Uno de los cocodrilos de agua dulce más grandes del mundo.
+                    Fue cazado casi hasta la extinción por su piel.
+                  </p>
+                  <h4 class="text-warning mb-3 mt-4">Características</h4>
+                  <ul>
+                    <li>Hocico largo y estrecho para capturar peces</li>
+                    <li>Puede vivir más de 70 años</li>
+                    <li>Excelente nadador y cazador</li>
+                    <li>Cuidado parental extenso</li>
+                  </ul>
+                  <h4 class="text-warning mb-3 mt-4">Conservación</h4>
+                  <p>
+                    Programas de cría en cautiverio están ayudando a recuperar
+                    la población.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 16: Cóndor Andino -->
+    <div class="modal fade" id="modal16" tabindex="-1">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header bg-dark text-white">
+            <h3 class="modal-title">Cóndor Andino</h3>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body bg-dark text-white">
+            <div class="container py-4">
+              <div class="row">
+                <div class="col-lg-6 mb-4">
+                  <img
+                    src="images/condor-andino.jpg"
+                    alt="Cóndor Andino"
+                    class="img-fluid rounded w-100"
+                    style="
+                      max-height: 600px;
+                      object-fit: contain;
+                      background: #1a1a1a;
+                    "
+                  />
+                </div>
+                <div class="col-lg-6">
+                  <h4 class="text-warning mb-3">Información General</h4>
+                  <p>
+                    <strong>Nombre Científico:</strong> <em>Vultur gryphus</em>
+                  </p>
+                  <p><strong>Familia:</strong> Cathartidae</p>
+                  <p>
+                    <strong>Estado:</strong>
+                    <span class="badge bg-warning text-dark">Vulnerable</span>
+                  </p>
+                  <p><strong>Hábitat:</strong> Cordillera de los Andes</p>
+                  <p><strong>Envergadura:</strong> Hasta 3.3 metros</p>
+                  <p><strong>Peso:</strong> 11-15 kg</p>
+                  <hr class="bg-light" />
+                  <h4 class="text-warning mb-3">Descripción</h4>
+                  <p>
+                    Una de las aves voladoras más grandes del mundo. Buitre
+                    carroñero crucial para el ecosistema. Ave nacional de varios
+                    países sudamericanos.
+                  </p>
+                  <h4 class="text-warning mb-3 mt-4">Capacidades de Vuelo</h4>
+                  <ul>
+                    <li>Puede volar hasta 320 km en un día</li>
+                    <li>Alcanza alturas de 6,000 metros</li>
+                    <li>Aprovecha corrientes térmicas para planear</li>
+                    <li>Puede vivir más de 70 años</li>
+                  </ul>
+                  <h4 class="text-warning mb-3 mt-4">Conservación</h4>
+                  <p>
+                    Envenenamiento accidental, pérdida de hábitat y persecución
+                    han reducido sus poblaciones.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 17: Oso Polar -->
+    <div class="modal fade" id="modal17" tabindex="-1">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header bg-dark text-white">
+            <h3 class="modal-title">Oso Polar</h3>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body bg-dark text-white">
+            <div class="container py-4">
+              <div class="row">
+                <div class="col-lg-6 mb-4">
+                  <img
+                    src="images/oso-polar.jpg"
+                    alt="Oso Polar"
+                    class="img-fluid rounded w-100"
+                    style="
+                      max-height: 600px;
+                      object-fit: contain;
+                      background: #1a1a1a;
+                    "
+                  />
+                </div>
+                <div class="col-lg-6">
+                  <h4 class="text-warning mb-3">Información General</h4>
+                  <p>
+                    <strong>Nombre Científico:</strong> <em>Ursus maritimus</em>
+                  </p>
+                  <p><strong>Familia:</strong> Ursidae</p>
+                  <p>
+                    <strong>Estado:</strong>
+                    <span class="badge bg-danger">Vulnerable</span>
+                  </p>
+                  <p><strong>Hábitat:</strong> Círculo Polar Ártico</p>
+                  <p><strong>Población:</strong> 22,000-31,000</p>
+                  <p><strong>Peso:</strong> 350-700 kg (machos)</p>
+                  <hr class="bg-light" />
+                  <h4 class="text-warning mb-3">Descripción</h4>
+                  <p>
+                    El carnívoro terrestre más grande del mundo. Perfectamente
+                    adaptado a la vida en el hielo marino ártico.
+                  </p>
+                  <h4 class="text-warning mb-3 mt-4">Adaptaciones</h4>
+                  <ul>
+                    <li>Dos capas de pelaje más piel negra</li>
+                    <li>Capa de grasa de hasta 11 cm</li>
+                    <li>Patas antideslizantes para hielo</li>
+                    <li>Excelente nadador (más de 100 km)</li>
+                  </ul>
+                  <h4 class="text-warning mb-3 mt-4">Amenazas</h4>
+                  <p>
+                    El cambio climático y la pérdida de hielo marino son
+                    amenazas existenciales.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 18: Ajolote Mexicano -->
+    <div class="modal fade" id="modal18" tabindex="-1">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header bg-dark text-white">
+            <h3 class="modal-title">Ajolote Mexicano</h3>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body bg-dark text-white">
+            <div class="container py-4">
+              <div class="row">
+                <div class="col-lg-6 mb-4">
+                  <img
+                    src="images/ajolote.jpg"
+                    alt="Ajolote Mexicano"
+                    class="img-fluid rounded w-100"
+                    style="
+                      max-height: 600px;
+                      object-fit: contain;
+                      background: #1a1a1a;
+                    "
+                  />
+                </div>
+                <div class="col-lg-6">
+                  <h4 class="text-warning mb-3">Información General</h4>
+                  <p>
+                    <strong>Nombre Científico:</strong>
+                    <em>Ambystoma mexicanum</em>
+                  </p>
+                  <p><strong>Familia:</strong> Ambystomatidae</p>
+                  <p>
+                    <strong>Estado:</strong>
+                    <span class="badge bg-danger">En Peligro Crítico</span>
+                  </p>
+                  <p>
+                    <strong>Hábitat:</strong> Canales de Xochimilco, Ciudad de
+                    México
+                  </p>
+                  <p>
+                    <strong>Población:</strong> Menos de 1,000 en vida salvaje
+                  </p>
+                  <p><strong>Tamaño:</strong> 15-45 cm</p>
+                  <hr class="bg-light" />
+                  <h4 class="text-warning mb-3">Descripción</h4>
+                  <p>
+                    Anfibio único que retiene sus características larvales toda
+                    su vida (neotenia). Conocido como "monstruo de agua" en
+                    náhuatl.
+                  </p>
+                  <h4 class="text-warning mb-3 mt-4">Capacidades Asombrosas</h4>
+                  <ul>
+                    <li>
+                      Puede regenerar extremidades, cola, ojos, corazón y
+                      cerebro completos
+                    </li>
+                    <li>No desarrolla metamorfosis como otros anfibios</li>
+                    <li>Branquias externas permanentes</li>
+                    <li>Importante para investigación biomédica</li>
+                  </ul>
+                  <h4 class="text-warning mb-3 mt-4">Amenazas</h4>
+                  <p>
+                    Urbanización, contaminación del agua y especies invasoras lo
+                    han llevado al borde de la extinción.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
